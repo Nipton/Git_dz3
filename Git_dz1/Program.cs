@@ -63,7 +63,8 @@
         static void Main(string[] args)
         {
             Calculator calc = new Calculator();
-            calc.GotResult += PrintResult;
+            // Регистрирует метод PrintResult для обработки события GotResult.
+            calc.GotResult += PrintResult; 
 
             while (true)
             {
