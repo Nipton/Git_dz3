@@ -79,6 +79,7 @@
                 switch (input)
                 {
                     case "1":
+                        // Запрашивает у пользователя число для сложения.
                         Console.Write("Введите число: ");
                         if (int.TryParse(Console.ReadLine(), out int result))
                         {
