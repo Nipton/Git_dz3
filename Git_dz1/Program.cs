@@ -64,8 +64,8 @@
         {
             Calculator calc = new Calculator();
             // Регистрирует метод PrintResult для обработки события GotResult.
-            calc.GotResult += PrintResult; 
-
+            calc.GotResult += PrintResult;
+            // Основной цикл программы.
             while (true)
             {
                 Console.WriteLine("Выберите действие:");
