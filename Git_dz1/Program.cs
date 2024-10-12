@@ -58,10 +58,12 @@
     {
         static void PrintResult(object sender, EventArgs e)
         {
+            // Печатает результат последней операции калькулятора в консоли.
             Console.WriteLine("Результат: " + (sender as Calculator)?.Result);
         }
         static void Main(string[] args)
         {
+            // Создает экземпляр класса Calculator.
             Calculator calc = new Calculator();
             // Регистрирует метод PrintResult для обработки события GotResult.
             calc.GotResult += PrintResult;
@@ -83,27 +85,32 @@
                         Console.Write("Введите число: ");
                         if (int.TryParse(Console.ReadLine(), out int result))
                         {
+                            // Очищает консоль и печатает результат сложения.
                             Console.Clear();
                             calc.Add(result);
                             Console.WriteLine();
                         }
                         else
                         {
+                            // Очищает консоль и сообщает о неверном ввод
                             Console.Clear();
                             Console.WriteLine("Неверный ввод.");
                             Console.WriteLine("\nРезультат: " + calc.Result);
                         }
                         break;
                     case "2":
+                        // Запрашивает у пользователя число для вычитания.
                         Console.Write("Введите число: ");
                         if (int.TryParse(Console.ReadLine(), out int result2))
                         {
+                            // Очищает консоль и печатает результат вычитания.
                             Console.Clear();
                             calc.Sub(result2);
                             Console.WriteLine();
                         }
                         else
                         {
+                            // Очищает консоль и сообщает о неверном вводе.
                             Console.Clear();
                             Console.WriteLine("Неверный ввод.");
                             Console.WriteLine("\nРезультат: " + calc.Result);
